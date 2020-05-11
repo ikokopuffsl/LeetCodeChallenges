@@ -15,7 +15,7 @@ def longestCommonPrefix(strs):
                 print(result)
                 return result
 
-examplelist = ["dog","racecar","car"]
+examplelist = [""]
 
 longestCommonPrefix(examplelist)
         
