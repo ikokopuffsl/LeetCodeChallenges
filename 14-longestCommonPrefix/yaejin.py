@@ -1,21 +1,27 @@
 def longestCommonPrefix(strs):
-
+    
+    if strs == []:
+        return ""
+    
     srtedList = sorted(strs)
-    commonFlag = True
     result = ""
     minLen = min(len(word)for word in strs)
-    print(minLen)
+    
+    if minLen <= 0:
+        return ""
 
-    while commonFlag == True:
-        for i in range(0, minLen):
-            if srtedList[0][i] == srtedList[len(srtedList)-1][i]:
-                result += srtedList[0][i]
-            else:
-                commonFlag = False
-                print(result)
-                return result
+    if len(strs) == 1:
+        return strs[0]
 
-examplelist = [""]
+    for i in range(0, minLen):
+        if srtedList[0][i] == srtedList[len(srtedList)-1][i]:
+            result += srtedList[0][i]
+        else:
+            return result
+
+    return result
+
+examplelist = []
 
 longestCommonPrefix(examplelist)
         
