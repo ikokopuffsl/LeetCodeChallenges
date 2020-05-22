@@ -12,7 +12,6 @@ var climbStairs = function (n) {
   // see how many unique ways they had and add them up
   // This is the bottom up approach
   // https://www.youtube.com/watch?v=NFJ3m9a1oJQ
-  let uniqueStepsAtN = [1, 1];
 
   for (let i = 2; i < n + 1; i++) {
     uniqueStepsAtN.push(uniqueStepsAtN[i - 1] + uniqueStepsAtN[i - 2]);
